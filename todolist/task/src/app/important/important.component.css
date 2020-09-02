@@ -1,0 +1,14 @@
+.star{
+    margin:2rem 0 0 16rem;
+}
+.mid{
+    color:black;
+  
+      
+       
+        background: linear-gradient(180deg, white, white 52px, #e5e5e5 52px, #e5e5e5 52px);
+        background-size: 100% 53px;
+        box-shadow: inset 0 1px 0 0 #e5e5e5;
+        line-height: 49px;
+        height: 1000px;
+}
