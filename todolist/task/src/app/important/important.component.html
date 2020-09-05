@@ -9,9 +9,24 @@
 
 <div class="mid">
   
-    <input type="text" placeholder="+ Add a task" style="width: 100%; border: none;" #im><br>
+    <input  (keydown.enter)="getv(im.value)" type="text" placeholder="+ Add a task" style="width: 100%; border: none;" #im><br>
+
   
-    <input (keydown.enter)="getv(im.value)" type="text" placeholder={{currentv}} style="width: 100%; border: none;" disabled><br><br>
+    
+    <table >
+        <tr>
+            <td >
+               <input type="checkbox" />
+            </td>
+            <td style="width: 100%;">
+               <input type="text" placeholder={{currentv}}   style="width: 100%; border: none;" disabled>
+            </td>
+            <td>
+                <input type="radio">
+            </td>
+        </tr>
+    </table>
+   
     
 </div>
     

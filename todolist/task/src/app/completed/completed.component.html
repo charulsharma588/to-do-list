@@ -4,11 +4,28 @@
        
          
      <div class="mid">
-        <input  (keydown.enter)="getvalue(box.value)" type="text" placeholder="Completed"  style="width: 100%; border: none;" #box><br>
-        <input type="text" placeholder={{currentval}}   style="width: 100%; border: none;" disabled><br><br>
+         
+        <input  (keydown.enter)="getvalue(box.value)" type="text" placeholder="Completed"  style="width: 100%; border: none;" #box>
         
         
-     </div>  
+            
+                
+         <table >
+             <tr *ngFor="let items of currentval; let i = index">
+                 <td >
+                    <input type="checkbox"/>
+                 </td>
+                 <td style="width: 100%;">
+                    <input type="text" placeholder={{items}}   style="width: 100%; border: none;" disabled>
+                 </td>
+                 <td>
+                     <input type="radio">
+                 </td>
+             </tr>
+         </table>
+            
+     
+</div>  
    
         
 

@@ -2,20 +2,28 @@
     <div class="head">
         <h6>
             <span>My Day...</span><br><br>
-            <span>Wednesday, September 2</span>
+            <span>{{now| date}}</span>
         </h6>
     
     </div>
     
-    <div class="my">
-        <input  (Keydown.enter)="getv(mm.value)" aria-label="Add a task" aria-describedby="badeAddInput-addTask-description" maxlength="255" type="text" placeholder="+ Add a task" tabindex="-1" style="width: 100%; border: none;" #mm><br>
-        <input type="text" placeholder={{currentv}} style="width: 100%; border:none" disabled><br><br>
-        
-    <br>
-    
+    <div class="my" >
+        <input  (Keydown.enter)="getv(mm.value)"   maxlength="255" type="text" placeholder="+ Add a task" tabindex="-1" style="width: 100%; border: none;" #mm><br>
+        <table  >
+            <tr *ngFor="let items of currentv; let i = index">
+            <td style="width: 100%; border: none;">
+                <input (click)= "check(items)" class="strikethrough" selected=true type="checkbox"  /><span style="padding: 10px; ">{{items}}</span>
+                  
+               
+            </td>
+                            
+            
+                <td>
+                    <input (click)="marked(items)" type="radio" >
+                </td>
+            </tr>
+        </table>
        
-        
-    </div>
-    
+     </div>
 
 

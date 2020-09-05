@@ -5,8 +5,20 @@
     <br>
     <div class="mid">
         <input (keydown.enter)="getvalue(pp.value)" type="text" placeholder="+Pending.." style="width: 100%; border: none;" #pp><br>
-        <input type="text" placeholder={{currentv}} style="width: 100%; border: none;" disabled><br><br>
+        <table >
+            <tr>
+                <td >
+                   <input type="checkbox"  id="radio-1"  />
+                </td>
+                <td style="width: 100%;">
+                   <input type="text" placeholder={{currentv}}   style="width: 100%; border: none;" disabled>
+                </td>
+                <td>
+                    <input type="radio">
+                </td>
+            </tr>
+        </table>
+       
         
     </div>
     
-
